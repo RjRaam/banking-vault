@@ -1,0 +1,54 @@
+# --- Java / Maven / Gradle ---
+target/
+*.iml
+*.class
+*.log
+*.jar
+*.war
+*.ear
+.idea/
+*.iws
+*.ipr
+*.project
+*.classpath
+*.settings/
+
+# Maven specific
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+
+# --- Node.js / React ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/frontend/build/
+/frontend/dist/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# --- Docker ---
+*.env
+.env.local
+.env.*.local
+docker-compose.override.yml
+
+# --- Logs ---
+logs/
+*.log
+
+# --- Others ---
+*.bak
+*.tmp

@@ -1,7 +1,10 @@
 package com.bankingvault.backend.model;
 
+import com.bankingvault.backend.config.CryptoConverter;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
@@ -23,6 +26,7 @@ public class BankAccount {
     private String bankName;
 
     @Column(nullable = false, length = 255)
+    @Convert(converter = CryptoConverter.class)
     private String accountNumberEncrypted;
 
     @Column(nullable = false, length = 20)

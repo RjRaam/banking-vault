@@ -1,6 +1,7 @@
 package com.bankingvault.backend.model;
 
 
+import com.bankingvault.backend.config.CryptoConverter;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,6 +22,7 @@ public class Card {
     private User user;
 
     @Column(nullable = false, length = 255)
+    @Convert(converter = CryptoConverter.class)
     private String cardNumberEncrypted;
 
     @Column(nullable = false, length = 7)

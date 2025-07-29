@@ -40,5 +40,10 @@ public class Card {
     protected void onCreate() {
         createdAt = LocalDateTime.now();
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
 }
 

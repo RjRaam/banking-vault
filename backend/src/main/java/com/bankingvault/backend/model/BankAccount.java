@@ -2,15 +2,15 @@ package com.bankingvault.backend.model;
 
 import com.bankingvault.backend.config.CryptoConverter;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "bank_accounts")
 @Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class BankAccount {
@@ -38,4 +38,9 @@ public class BankAccount {
     protected void onCreate() {
         createdAt = LocalDateTime.now();
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
 }
